@@ -14,4 +14,8 @@ public final class ArchiveReader {
     public static List<String> read(Path path) throws IOException {
         return Files.readAllLines(path, StandardCharsets.UTF_8);
     }
+
+    public static void write(Path path, List<String> lines) throws IOException {
+        Files.write(path, lines, StandardCharsets.UTF_8);
+    }
 }

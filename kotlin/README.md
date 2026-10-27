@@ -10,5 +10,6 @@ gradlew.bat test      # Windows
 ```
 
 - File-reading helper: `ArchiveReader.read(path)` in `src/main/kotlin/lasttransmission/ArchiveReader.kt` returns the raw lines as a `List<String>`.
+- File-writing helper: `ArchiveReader.write(path, lines)` in the same file writes each string as one line. Use it if you want to save output to a file.
 - Tests live in `src/test/kotlin/lasttransmission/`. Gradle runs tests from this folder, so read the archive with `Path.of("data", "act1.txt")`.
 - `ReconstructionTest.kt` contains one intentionally failing placeholder. Replace it with your first real test.

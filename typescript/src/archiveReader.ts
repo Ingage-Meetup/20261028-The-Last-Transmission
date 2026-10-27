@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 
 /** Infrastructure supplied for the kata. No reconstruction logic lives here. */
 export function readArchive(path: string): string[] {
@@ -7,4 +7,8 @@ export function readArchive(path: string): string[] {
     lines.pop();
   }
   return lines;
+}
+
+export function writeArchive(path: string, lines: string[]): void {
+  writeFileSync(path, lines.map((line) => `${line}\n`).join(""), "utf8");
 }

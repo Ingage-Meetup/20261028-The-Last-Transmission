@@ -122,7 +122,7 @@ Expected reconstruction: `GOOD MORNING`. The space is part of the fifth field an
 
 ### Working with the file
 
-Each starter project provides a simple file-reading helper that returns the raw lines from `act1.txt`. File access is **not** the focus of this kata. Your code is responsible for interpreting those lines and reconstructing the text.
+Each starter project provides a simple file-reading helper that returns the raw lines from `act1.txt`, and a matching file-writing helper that saves lines to a file. File access is **not** the focus of this kata. Your code is responsible for interpreting those lines and reconstructing the text.
 
 Keep most tests independent of the file system by passing a small in-memory collection of strings to your reconstruction component. Once those tests pass, exercise your solution against the supplied archive.
 
@@ -164,10 +164,10 @@ Pick the folder for your language. Each one is self-contained, with its own copy
 
 Every starter contains:
 
-- **A file-reading helper** that returns the archive's raw lines. It contains no reconstruction logic.
-- **One passing smoke test** confirming that the helper can read `data/act1.txt`.
+- **A file-reading helper** that returns the archive's raw lines, and **a file-writing helper** that writes lines to a file. Neither contains reconstruction logic.
+- **Two passing smoke tests** confirming that the helpers can read `data/act1.txt` and write a file that reads back unchanged.
 - **One intentionally failing placeholder test** to begin the TDD cycle. Replace it with your first meaningful reconstruction test.
 
-There is no prescribed reconstruction class or API. The `README.md` in each folder lists that language's requirements, the helper's name, and how to locate `data/act1.txt` from a test.
+There is no prescribed reconstruction class or API. The `README.md` in each folder lists that language's requirements, the helpers' names, and how to locate `data/act1.txt` from a test.
 
 When Mission Control sends a new archive snapshot, put it in your starter's `data/` folder next to `act1.txt`.

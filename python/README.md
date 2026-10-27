@@ -13,5 +13,6 @@ python -m pytest
 ```
 
 - File-reading helper: `read_archive(path)` in `src/last_transmission/archive_reader.py` returns the raw lines as a `list[str]`.
+- File-writing helper: `write_archive(path, lines)` in the same file writes each string as one line. Use it if you want to save output to a file.
 - Tests live in `tests/`. `pyproject.toml` puts `src/` on the import path, so import with `from last_transmission.archive_reader import read_archive`. Read the archive relative to the test file with `Path(__file__).parent.parent / "data" / "act1.txt"`.
 - `tests/test_reconstruction.py` contains one intentionally failing placeholder. Replace it with your first real test.
